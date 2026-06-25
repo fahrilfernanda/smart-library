@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -9,6 +10,10 @@ const nextConfig: NextConfig = {
 
   images: {
     unoptimized: true,
+  },
+
+  turbopack: {
+    root: path.join(__dirname),
   },
 };
 
